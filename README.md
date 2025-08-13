@@ -17,37 +17,6 @@ The lab serves as a hands-on environment for cybersecurity, cloud computing, and
 
 ---
 
-## Physical & Virtual Lab Highlights
-### Physical Layer
-- **Rack 1 – Core Lab**
-  - Patch Panel, Brush Panel
-  - 2U GeekPi Screen / KVM
-  - Proxmox Server (VM Host)
-  - pfSense Server
-  - Ubuntu Server & Raspberry Pi
-  - Managed Switch
-- **Rack 2 – Power & Storage**
-  - UPS, NAS
-  - k3s Cluster Nodes (Kubernetes experiments)
-- **External Devices**
-  - Gaming PC (remote VM management)
-  - Odyssey G9 Monitor
-  - TP-Link EAP610 Wi-Fi 6 Access Point (WAN connectivity, PoE powered)
-
-### Virtual Layer
-- Proxmox VMs:
-  - Windows Server (Active Directory)
-  - Ubuntu Server (utilities, SIEM testing)
-  - pfSense (optional VM)
-- VLAN Segmentation:
-  - VLAN 10: Lab VMs
-  - VLAN 20: Management / Firewall
-  - VLAN 30: DNS / IoT (Pi-hole)
-- k3s Cluster (Rack 2) for lightweight Kubernetes workloads
-- Raspberry Pi running Pi-hole for DNS / ad-blocking
-
----
-
 ## Project Roadmap (Sample)
 
 | Month | Track | Project Title | Tools | Status |
@@ -59,14 +28,9 @@ The lab serves as a hands-on environment for cybersecurity, cloud computing, and
 | 3–4   | Pentesting | Juice Shop OWASP Exploits & Report | Juice Shop, Burp Suite | Planned |
 | 3–4   | Pentesting | Red Team Report (Metasploit + DVWA) | Kali, Metasploit, DVWA | Planned |
 
-> Full project roadmap and monthly notes are included in the corresponding folders (`Month-1-2-Build-Virtual-Home-Lab/`, `Month-1-2-SIEM-Setup/`, etc.).
+> Full project roadmap and monthly notes are included in the project tab.
 
----
 
-## Diagrams
-- Physical Rack Layouts & Patch Panel Mapping  
-- Virtual Network Topology & VLAN Segmentation  
-- Stored in `/Diagrams` folder as ASCII Markdown or PNG images  
 
 ---
 
