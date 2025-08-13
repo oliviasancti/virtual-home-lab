@@ -1,0 +1,16 @@
+# Virtual Layer Topology
+
+Proxmox VM Host:
+- VM1: Windows Server 2019/2022 (AD Domain Controller)
+- VM2: Ubuntu Server (Utility & SIEM testing)
+- VM3: pfSense (Firewall)
+
+VLANs:
+- VLAN 10: Lab VMs
+- VLAN 20: Management / Firewall
+- VLAN 30: DNS / IoT (Pi-hole on Raspberry Pi)
+
+External Devices:
+- Gaming PC → VLAN 20 → Remote VM management
+- Odyssey G9 Monitor connected to Gaming PC
+- TP-Link EAP610 → Provides LAN/WAN connectivity
