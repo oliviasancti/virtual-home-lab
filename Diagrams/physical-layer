@@ -1,0 +1,13 @@
+# Rack 1 – Core Lab
+[Top to Bottom]
+2U GeekPi Screen / KVM
+Proxmox Server (VM Host)
+pfSense Server
+Ubuntu Server / Raspberry Pi
+Managed Switch
+Patch Panel / Brush Panel
+
+# Rack 2 – Power & Storage
+UPS
+NAS
+k3s Cluster Nodes
