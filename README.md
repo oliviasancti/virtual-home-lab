@@ -116,7 +116,6 @@ This lab is designed to simulate real-world infrastructure and security workflow
 
 ## Repository Structure
 
-```text
 docs/            -> topology, network design, setup documentation
 infrastructure/  -> Proxmox, pfSense, AD, and system configurations
 projects/        -> lab projects, experiments, and reports
