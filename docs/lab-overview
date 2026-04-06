@@ -1,0 +1,31 @@
+# Lab Overview
+
+## Purpose
+
+This lab is designed to provide a controlled environment for experimenting with:
+
+- virtualization and infrastructure
+- network segmentation and firewall configuration
+- storage and backup systems
+- monitoring and observability
+- cloud-native workloads and orchestration
+- cybersecurity testing and simulation
+
+## Architecture Summary
+
+- pfSense used as the central firewall and router
+- VLAN segmentation is used to isolate lab environments
+- Proxmox cluster used for virtualization and infrastructure testing
+- TrueNAS is used for shared storage and backups
+- Kubernetes cluster is used for container orchestration
+
+## Design Principles
+
+- Segmentation: isolate workloads and test environments
+- Reproducibility: all systems can be rebuilt from documentation
+- Observability: systems are monitored and logged
+- Security-first: minimal exposure and controlled access
+
+## Notes
+
+Sensitive information such as credentials, internal IP mappings, and access details are not stored in this repository.
