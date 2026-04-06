@@ -1,1 +1,30 @@
+# Network Configuration
 
+## Overview
+
+The network is segmented using pfSense and VLANs to separate:
+
+- management traffic
+- lab environments
+- service workloads
+
+## WAN
+
+- Upstream: ISP gateway
+- Addressing: DHCP from upstream provider
+
+## LAN
+
+- Private subnet (RFC1918 addressing)
+- pfSense acts as default gateway
+
+## VLAN Design (Planned)
+
+- Management VLAN
+- Lab VLAN
+- Services VLAN
+
+## Notes
+
+- Exact IP ranges, credentials, and device-specific configurations are intentionally excluded.
+- This documentation reflects structure and design, not sensitive operational details.
