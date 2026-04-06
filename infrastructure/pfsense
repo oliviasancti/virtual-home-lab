@@ -1,1 +1,27 @@
+# pfSense Setup
 
+## Purpose
+
+pfSense acts as the central firewall and router for the lab environment.
+
+## VM Configuration
+
+- Hosted on Proxmox
+- Multiple network interfaces for WAN and LAN separation
+
+## Interfaces
+
+- WAN: connected to upstream gateway
+- LAN: internal network for lab systems
+
+## Responsibilities
+
+- Routing between networks
+- Firewall rule enforcement
+- VLAN segmentation
+- Traffic control and isolation
+
+## Notes
+
+- Interface mappings and IP assignments are environment-specific and not included.
+- Credentials and access configurations are not stored in this repository.
