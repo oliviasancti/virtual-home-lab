@@ -1,45 +1,128 @@
-# virtual-home-lab
-Home lab setup, topology notes, VM setup, racks and projects 
+# Virtual Home Lab
 
-## Overview
-This repository documents my **virtual home lab environment** and related projects, showcasing my **organization, documentation skills, and project planning**.  
-The lab serves as a hands-on environment for cybersecurity, cloud computing, and IT infrastructure experiments, while also demonstrating **structured project management**.
+A documented home lab and cybersecurity environment built to develop hands-on experience across infrastructure, networking, security, DevOps, and cloud-native systems.
+
+This repository tracks my lab architecture, infrastructure setup, and hands-on projects performed in a segmented, production-like environment.
+
+---
+
+## Purpose
+
+This lab is designed to simulate real-world infrastructure and security workflows while building practical experience in:
+
+- Virtualization and infrastructure management
+- Network segmentation and firewall design
+- Storage, backups, and shared datastores
+- Monitoring, logging, and observability
+- Cloud-native deployments and GitOps workflows
+- Security testing, attack simulation, and detection
+- Automation and infrastructure experimentation
+
+---
+
+## Core Architecture
+
+- **Firewall & Routing**: pfSense with VLAN segmentation for traffic isolation, access control, and security zoning  
+- **Networking**: Managed switching and access points supporting segmented lab, management, and service networks  
+- **Storage**: TrueNAS (Ugreen NAS) providing centralized storage, backups, and shared datastores (NFS/SMB)  
+
+---
+
+## Compute & Virtualization
+
+- **Hypervisor**: Proxmox cluster (Lenovo ThinkCentre M910q nodes)  
+- **Workloads**:
+  - Ubuntu VMs for services and tooling  
+  - Windows Server for Active Directory and identity management  
+  - Security-focused VMs for lab simulations  
+- **Capabilities**:
+  - Snapshotting and rollback for testing  
+  - Shared storage integration for replication  
+  - High availability and infrastructure experimentation  
+
+---
+
+## Containers & Orchestration
+
+- **Container Platform**: Docker  
+- **Orchestration**: Kubernetes cluster (Raspberry Pi-based)  
+
+### Deployed Services:
+- **Grafana** → monitoring and observability dashboards  
+- **MongoDB** → stateful application workloads  
+- **ArgoCD** → GitOps-based deployment workflows  
+- **Pi-hole** → containerized DNS filtering for network-wide control  
+
+---
+
+## Security & Monitoring
+
+- VLAN-based segmentation to support:
+  - lab isolation  
+  - attack simulation environments  
+  - zero-trust concepts  
+
+- Centralized logging and monitoring pipelines for:
+  - system visibility  
+  - detection workflows  
+  - alerting and analysis  
+
+- Environment designed for:
+  - blue team monitoring  
+  - ethical hacking labs  
+  - incident simulation and response  
+
+---
+
+## Operations & Management
+
+- Rack-mounted setup with integrated display and KVM access  
+- Optimized for:
+  - small-form-factor enterprise hardware  
+  - power efficiency and airflow  
+- Centralized visibility via:
+  - **Glance dashboard** (single-pane-of-glass monitoring)  
 
 ---
 
 ## Skills Demonstrated
-- Virtualization & VM Management (Proxmox, Windows Server, Ubuntu)  
-- Network Design & Firewall Configuration (pfSense, VLANs, Switch Management)  
-- Cloud Security Fundamentals (AWS, IAM, misconfiguration detection)  
-- Cybersecurity & Pentesting (SIEM setup, vulnerability scanning, k3s experimentation)  
-- Project Planning & Documentation (Milestones, task lists, diagrams)  
-- Technical Communication & Professional Documentation  
+
+- **Virtualization & Infrastructure**: Proxmox clustering, VM lifecycle management  
+- **Networking & Security**: pfSense, VLAN segmentation, firewall rule design  
+- **Storage & Systems**: TrueNAS, shared storage, backup strategies  
+- **Cloud-Native & DevOps**: Docker, Kubernetes, ArgoCD, GitOps workflows  
+- **Monitoring & Observability**: Grafana, centralized logging pipelines  
+- **Cybersecurity**: network isolation, attack simulation environments, detection workflows  
+- **Automation & Experimentation**: infrastructure testing, repeatable lab scenarios  
+- **Documentation & System Design**: architecture planning, structured lab documentation  
 
 ---
 
-## Project Roadmap (Sample)
+## Lab Stack
 
-| Month | Track | Project Title | Tools | Status |
-|-------|-------|---------------|-------|--------|
-| 1–2   | Home Lab & Core Infra | Build Virtual Home Lab w/ pfSense + AD | Proxmox, Windows Server, Ubuntu, pfSense | Planned |
-| 1–2   | Home Lab & Core Infra | SIEM Setup & Log Monitoring | Wazuh/Splunk, ELK, Winlogbeat | Planned |
-| 1–2   | Cloud Security | AWS Basic Architecture + IAM + Misconfig Report | AWS Free Tier, EC2, IAM | Planned |
-| 3–4   | Pentesting | Vulnerability Scan + Risk Report | OpenVAS, Nessus, Nmap | Planned |
-| 3–4   | Pentesting | Juice Shop OWASP Exploits & Report | Juice Shop, Burp Suite | Planned |
-| 3–4   | Pentesting | Red Team Report (Metasploit + DVWA) | Kali, Metasploit, DVWA | Planned |
-
-> Full project roadmap and monthly notes are included in the project tab.
-
-
+- **Hypervisor**: Proxmox  
+- **Firewall/Router**: pfSense  
+- **Storage**: TrueNAS (Ugreen NAS)  
+- **Compute Nodes**: Lenovo ThinkCentre M910q cluster  
+- **Container Platform**: Docker  
+- **Orchestration**: Kubernetes (Raspberry Pi cluster)  
+- **Monitoring**: Grafana  
+- **GitOps**: ArgoCD  
+- **Database**: MongoDB  
+- **DNS Filtering**: Pi-hole  
+- **Dashboard**: Glance  
 
 ---
 
-## How This Demonstrates Professional Skills
-1. **Organization** – Structured notes, diagrams, and project roadmaps.
-2. **Documentation Skills** – Clear step-by-step setup guides, VLAN and VM configurations, checklists.
-3. **Project Planning** – Monthly milestones, tool lists, status tracking, and notes linked to each project.
-4. **Technical Expertise** – Virtualization, networking, cloud, cybersecurity, and AI projects all documented clearly for a professional audience.
+## Repository Structure
 
+```text
+docs/            -> topology, network design, setup documentation
+infrastructure/  -> Proxmox, pfSense, AD, and system configurations
+projects/        -> lab projects, experiments, and reports
+notes/           -> lab journal, troubleshooting, and changes
+scripts/         -> automation and tooling
+assets/          -> diagrams, rack photos, screenshots
 ---
 
 ## References
