@@ -1,1 +1,26 @@
+# Proxmox Setup
 
+## Purpose
+
+Proxmox provides the virtualization layer for all lab infrastructure.
+
+## Hardware
+
+- Small-form-factor nodes (Lenovo ThinkCentre M910q)
+- Clustered for experimentation and scalability
+
+## Responsibilities
+
+- Hosting virtual machines
+- Managing compute resources
+- Supporting snapshots and rollback
+- Integrating with shared storage
+
+## Networking
+
+- Uses bridged networking to connect VMs to pfSense
+- Supports VLAN-aware configurations
+
+## Notes
+
+- Node-specific IPs and credentials are not stored in this repository.
