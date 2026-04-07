@@ -1,1 +1,86 @@
+# pfSense Firewall Setup
 
+## Overview
+Deployed pfSense as the central firewall/router for a home lab environment to enable segmentation, DHCP, and controlled routing.
+
+---
+
+## Network Architecture
+
+Internet → ISP Gateway → pfSense → Switch → Lab Devices
+
+- WAN: DHCP (private IP from ISP)
+- LAN: 192.168.50.1/24
+- Internal Network: 192.168.50.0/24
+
+---
+
+## Hardware
+
+- Small form factor PC (pfSense host)
+- Managed switch
+- Patch panel
+- ISP gateway
+- USB-to-Ethernet adapter
+
+---
+
+## Configuration Summary
+
+### Interfaces
+- WAN: connected to ISP gateway
+- LAN: connected to internal switch
+
+### LAN Setup
+- Gateway: 192.168.50.1
+- DHCP enabled
+- Range: 192.168.50.10 – 192.168.50.100
+
+### WAN Setup
+- DHCP (default)
+
+### DNS
+- Configured external resolvers
+- Disabled upstream override
+
+### Time
+- Configured NTP server
+- Set correct timezone
+
+### Security
+- Default credentials changed
+- Web UI secured via HTTPS
+
+---
+
+## Validation
+
+- Web UI accessible via LAN gateway IP
+- DHCP assigns addresses to clients
+- Internet access confirmed through firewall
+
+---
+
+## Key Skills
+
+- Firewall deployment
+- Network segmentation
+- DHCP + DNS configuration
+- Routing & NAT
+- Infrastructure troubleshooting
+
+---
+
+## Notes
+
+- Uses single NIC + USB adapter setup
+- Running behind ISP gateway (double NAT)
+- Designed for scalability
+
+---
+
+## Next Steps
+
+- Integrate virtualization host
+- Deploy monitoring (SIEM)
+- Implement VLANs
