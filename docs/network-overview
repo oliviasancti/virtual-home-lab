@@ -1,30 +1,64 @@
-# Network Configuration
+# Network Overview
 
-## Overview
+## Purpose
+This document outlines the network architecture of the home lab environment, including segmentation, routing, and infrastructure components.
 
-The network is segmented using pfSense and VLANs to separate:
+---
 
-- management traffic
-- lab environments
-- service workloads
+## Architecture
 
-## WAN
+Internet → ISP Gateway → pfSense → Switch → Lab Devices
 
-- Upstream: ISP gateway
-- Addressing: DHCP from upstream provider
+---
 
-## LAN
+## Network Segments
 
-- Private subnet (RFC1918 addressing)
-- pfSense acts as default gateway
+### WAN (External Network)
+- Source: ISP Gateway
+- IP Range: Private (DHCP assigned)
+- pfSense WAN IP: DHCP (private range)
 
-## VLAN Design (Planned)
+---
 
-- Management VLAN
-- Lab VLAN
-- Services VLAN
+### LAN (Internal Lab Network)
+- Network: 192.168.50.0/24
+- Gateway: 192.168.50.1
+- DHCP Range: 192.168.50.10 – 192.168.50.100
+
+---
+
+## Core Components
+
+- pfSense Firewall (routing, NAT, DHCP)
+- Managed Switch (segmentation, distribution)
+- Patch Panel (structured cabling)
+
+---
+
+## Traffic Flow
+
+Devices → pfSense → ISP Gateway → Internet
+
+---
+
+## Security Model
+
+- Segmented internal network
+- Firewall enforcement at pfSense
+- Isolation between lab and home network
+
+---
+
+## Future Improvements
+
+- VLAN segmentation
+- IDS/IPS (Snort / Suricata)
+- VPN access
+- Zero Trust architecture
+
+---
 
 ## Notes
 
-- Exact IP ranges, credentials, and device-specific configurations are intentionally excluded.
-- This documentation reflects structure and design, not sensitive operational details.
+- Lab operates behind ISP router (double NAT)
+- Designed for experimentation and security testing
