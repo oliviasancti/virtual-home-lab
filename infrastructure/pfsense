@@ -1,27 +1,60 @@
-# pfSense Setup
+# pfSense (Firewall & Router)
 
-## Purpose
+## Overview
+pfSense serves as the central firewall and router for the home lab environment. It manages traffic between the internal lab network and the upstream ISP gateway.
 
-pfSense acts as the central firewall and router for the lab environment.
+---
 
-## VM Configuration
+## Role in Architecture
 
-- Hosted on Proxmox
-- Multiple network interfaces for WAN and LAN separation
+Internet → ISP Gateway → pfSense → Switch → Lab Systems
+
+---
+
+## Core Responsibilities
+
+- Routing between WAN and LAN
+- Network Address Translation (NAT)
+- DHCP services for internal network
+- Firewall rule enforcement
+- Network segmentation (planned)
+
+---
 
 ## Interfaces
 
-- WAN: connected to upstream gateway
-- LAN: internal network for lab systems
+- **WAN**
+  - Connected to upstream ISP gateway
+  - Receives IP via DHCP
 
-## Responsibilities
+- **LAN**
+  - Internal lab network gateway
+  - Subnet: 192.168.50.0/24
 
-- Routing between networks
-- Firewall rule enforcement
-- VLAN segmentation
-- Traffic control and isolation
+---
+
+## Integration
+
+pfSense sits at the boundary of the lab and connects to:
+
+- Managed switch (internal distribution)
+- Virtualization hosts (Proxmox)
+- End devices and lab systems
+
+---
+
+## Documentation
+
+Full setup and configuration steps:
+→ ../../docs/network/pfsense-setup.md
+
+Network design overview:
+→ ../../docs/network/network-overview.md
+
+---
 
 ## Notes
 
-- Interface mappings and IP assignments are environment-specific and not included.
-- Credentials and access configurations are not stored in this repository.
+- Operating behind ISP gateway (double NAT)
+- Designed for scalability and segmentation
+- Will support VLAN-based isolation in future phases
